@@ -1,7 +1,7 @@
 {
   "name": "@appandflow/expo-image-cropping",
   "version": "0.1.0",
-  "description": "test",
+  "description": "A library for cropping image in Expo without any external native plugin",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
