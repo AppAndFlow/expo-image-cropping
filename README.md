@@ -11,11 +11,24 @@ npm install @appandflow/expo-image-cropping
 ## Usage
 
 ```js
-import { multiply } from '@appandflow/expo-image-cropping';
+import {
+  ExpoCroppingImageModal,
+  ExpoCroppingImageModalRef,
+} from '@appandflow/expo-image-cropping';
 
 // ...
 
-const result = await multiply(3, 7);
+const modalRef = useRef<ExpoCroppingImageModalRef>(null);
+
+// ...
+
+<ExpoCroppingImageModal
+  modalRef={modalRef}
+  imageSrc={originalImage}
+  onImageSave={(img) => {
+    console.log('the image save is: ', img);
+  }}
+/>
 ```
 
 ## Contributing
