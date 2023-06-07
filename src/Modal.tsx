@@ -4,7 +4,7 @@ import { ImageResult } from 'expo-image-manipulator';
 
 import { fakeId } from './utils';
 import Cropper from './Cropper';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { View } from 'react-native';
 
 export interface ModalRef {
   present: () => void;
@@ -46,7 +46,7 @@ export default function Modal({
 
   return (
     <RnModal visible={visible} animationType="fade" key={id}>
-      <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={{ flex: 1 }}>
         <Cropper
           onClose={() => {
             setVisible(false);
@@ -61,7 +61,7 @@ export default function Modal({
           saveBtnLabel={saveBtnLabel}
           compress={compress}
         />
-      </GestureHandlerRootView>
+      </View>
     </RnModal>
   );
 }

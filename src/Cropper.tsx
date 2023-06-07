@@ -7,7 +7,11 @@ import {
   Text,
   LayoutChangeEvent,
 } from 'react-native';
-import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import {
+  Gesture,
+  GestureDetector,
+  gestureHandlerRootHOC,
+} from 'react-native-gesture-handler';
 import Animated, {
   SharedValue,
   useAnimatedStyle,
@@ -37,7 +41,7 @@ interface Props {
   compress?: number;
 }
 
-export default function Cropper({
+const Cropper = ({
   imageSrc,
   onClose,
   minSize = 50,
@@ -46,7 +50,7 @@ export default function Cropper({
   croppingBtnLabel,
   onImageSave,
   compress = 1,
-}: Props) {
+}: Props) => {
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
 
@@ -588,4 +592,7 @@ export default function Cropper({
       </View>
     </View>
   );
-}
+};
+
+// @ts-ignore
+export default gestureHandlerRootHOC(Cropper) as typeof Cropper;
