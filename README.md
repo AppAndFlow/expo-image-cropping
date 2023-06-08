@@ -1,6 +1,10 @@
-# @appandflow/expo-image-cropping
+![github_readme_banner](https://github.com/AppAndFlow/expo-image-cropping/assets/7192823/ca80d920-927b-4240-989e-b77c256927fe)
 
-A package for cropping image with expo without any plugin
+App & Flow is a Montreal-based, close-knit team that specializes in React Native/Expo development. Need a hand? Let’s build together! team@appandflow.com
+
+[![npm (scoped)](https://img.shields.io/npm/v/@appandflow/expo-image-cropping.svg)](https://www.npmjs.com/package/@appandflow/expo-image-cropping)
+
+A package for cropping image with expo without any plugin. (Still WIP. Wait 1.0.0 for stable release)
 
 ## Installation
 
